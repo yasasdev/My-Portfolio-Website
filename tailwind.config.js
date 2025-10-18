@@ -19,9 +19,15 @@ module.exports = {
       boxShadow: {
         'black': '4px 4px 0 #000',
         'white': '4px 4px 0 #fff',
-      }
+      },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px', 
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+      },
     },
   },
   plugins: [],
 }
-

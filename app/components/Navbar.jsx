@@ -1,9 +1,18 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const sideMenu = useRef();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const openMenu = () => {
     sideMenu.current.style.transform = "translateX(-16rem)";
@@ -23,7 +32,13 @@ const Navbar = () => {
         />
       </div>
 
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-gray-100/80 backdrop-blur-lg"
+            : "bg-gray-100/60 backdrop-blur-md"
+        }`}
+      >
         <a href="#top">
           <Image
             src={assets.logo}
@@ -31,7 +46,7 @@ const Navbar = () => {
             className="w-28 cursor-pointer mr-14"
           />
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${scrolled ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
           <li>
             <a className="font-Ovo" href="#top">
               Home
