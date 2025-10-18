@@ -3,16 +3,15 @@ import Image from "next/image";
 import React, { useRef } from "react";
 
 const Navbar = () => {
-
   const sideMenu = useRef();
 
-  const openMenu = ()=> {
-    sideMenu.current.style.transform = 'translateX(-16rem)'
-  }
-  
-  const closeMenu = ()=> {
-    sideMenu.current.style.transform = 'translateX(16rem)'
-  }
+  const openMenu = () => {
+    sideMenu.current.style.transform = "translateX(-16rem)";
+  };
+
+  const closeMenu = () => {
+    sideMenu.current.style.transform = "translateX(16rem)";
+  };
 
   return (
     <>
@@ -80,10 +79,16 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <ul ref={sideMenu} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500">
-          
+        <ul
+          ref={sideMenu}
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500"
+        >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <Image src={assets.close_black} alt="menu close icon" className="w-5 cursor-pointer" />
+            <Image
+              src={assets.close_black}
+              alt="menu close icon"
+              className="w-5 cursor-pointer"
+            />
           </div>
 
           <li>
