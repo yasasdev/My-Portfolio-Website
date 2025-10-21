@@ -27,6 +27,9 @@ module.exports = {
         lg: '12px',
         xl: '16px',
       },
+      gridTemplateColumns: {
+        'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
+      }
     },
   },
   plugins: [],
