@@ -13,7 +13,7 @@ const Footer = ({ isDarkMode }) => {
           <Image
             src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
             alt="mail icon"
-            className="w-5 mx-auto mb-2"
+            className="w-5 mx-auto mt-1"
           />
           yasaslekamge@gmail.com
         </div>
