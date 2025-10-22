@@ -13,7 +13,7 @@ const Header = () => {
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
         <Image
-          src={assets.profile_img}
+          src={assets.yasas_profile_img}
           alt="Profile image"
           className="rounded-full w-32 h-32 object-cover"
         />

@@ -1,4 +1,3 @@
-import user_image from './user-image.png';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
@@ -15,7 +14,8 @@ import yasas_logo from './yasas_logo.png'
 import yasas_logo_dark from './yasas_logo_dark.png'
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
+import yasas_profile_img from './yasas-profile-image.png';
+import yasas_user_profile_img from './yasas-user-img.png';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -37,7 +37,6 @@ import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 export const assets = {
-    user_image,
     code_icon,
     code_icon_dark,
     edu_icon,
@@ -54,7 +53,8 @@ export const assets = {
     yasas_logo_dark,
     mail_icon,
     mail_icon_dark,
-    profile_img,
+    yasas_profile_img,
+    yasas_user_profile_img,
     download_icon,
     hand_icon,
     header_bg_color,

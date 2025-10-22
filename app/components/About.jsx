@@ -32,7 +32,7 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex w-full flex-col lg:flex-row items-center gap-20 my-20"
+        className="flex w-full flex-col lg:flex-row items-center gap-20 my-10"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -41,9 +41,9 @@ const About = ({ isDarkMode }) => {
           className="w-64 sm:w-80 rounded-3xl max-w-none"
         >
           <Image
-            src={assets.user_image}
+            src={assets.yasas_user_profile_img}
             alt="User Image"
-            className="w-full rounded-3xl"
+            className="w-full rounded-3xl mb-20"
           />
         </motion.div>
         <motion.div
@@ -89,10 +89,7 @@ const About = ({ isDarkMode }) => {
           <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
             Tools I use
           </h4>
-          <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
+          <ul
             className="flex items-center gap-3 sm:gap-5"
           >
             {toolsData.map((tool, index) => (
@@ -105,7 +102,7 @@ const About = ({ isDarkMode }) => {
                 <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
               </motion.li>
             ))}
-          </motion.ul>
+          </ul>
         </motion.div>
       </motion.div>
     </motion.div>
