@@ -75,7 +75,7 @@ const Contact = () => {
           text-white rounded-full mx-auto hover:bg-black duration-500 
           dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >
-          Submit now{" "}
+          Submit now
           <Image
             src={assets.right_arrow_white}
             alt="arrow icon"
