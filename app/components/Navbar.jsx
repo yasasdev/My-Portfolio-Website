@@ -23,7 +23,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   };
 
   return (
-    <>
+    <div id="top">
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
           transition-all duration-300 dark:bg-darkTheme dark:shadow-white/20 ${
@@ -139,7 +139,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 
