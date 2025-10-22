@@ -15,7 +15,7 @@ const Header = () => {
         <Image
           src={assets.yasas_profile_img}
           alt="Profile image"
-          className="rounded-full w-32 h-32 object-cover"
+          className="rounded-full w-32 h-32 object-cover -mt-9"
         />
       </motion.div>
 
