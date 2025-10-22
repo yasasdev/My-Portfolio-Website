@@ -51,7 +51,7 @@ const Work = ({ isDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+            className="aspect-square bg-no-repeat bg-contain bg-center rounded-lg relative cursor-pointer group"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
             <div
@@ -72,7 +72,7 @@ const Work = ({ isDarkMode }) => {
           </motion.div>
         ))}
       </motion.div>
-      <motion.a
+      {/* <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
@@ -89,7 +89,7 @@ const Work = ({ isDarkMode }) => {
           alt="Right Arrow"
           className="w-4"
         />
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   );
 };

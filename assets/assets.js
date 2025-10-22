@@ -76,32 +76,41 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'Blockchain',
+        description: 'Blockchain Notes Keeper Application',
+        bgImage: '/blockchain.jpeg',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Web Application',
+        description: 'Blog Web Application',
+        bgImage: '/blog.jpeg',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'Google OAuth',
+        description: 'Notepad Application with Google OAuth',
+        bgImage: '/google.jpeg',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'API Application',
+        description: 'Global Holiday Seeker using API',
+        bgImage: '/api.jpeg',
+    },
+    {
+        title: 'LMS',
+        description: 'Learning Management System Application',
+        bgImage: '/lms.jpeg',
+    },
+    {
+        title: 'POS System',
+        description: 'POS System for a Phone shop',
+        bgImage: '/pos.jpeg',
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming, and maintaining websites.', link: '' },
+    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for smartphones and tablets.', link: '' },
+    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless and user-friendly experience.', link: '' },
 ]
 
 export const infoList = [

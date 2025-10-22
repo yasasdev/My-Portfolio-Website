@@ -37,7 +37,7 @@ const Services = () => {
       >
         I offer a range of services to help you build and optimize your web
         applications: like Frontend Development, Backend & APIs, Full-Stack
-        Applications, Performance & Optimization and Testing & Quality.
+        Applications.
       </motion.p>
       <motion.div 
         initial={{ opacity: 0 }}
