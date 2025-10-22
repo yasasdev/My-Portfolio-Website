@@ -52,7 +52,7 @@ const About = ({ isDarkMode }) => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex-1"
         >
-          <p className="mb-10 max-w-2xl font-Ovo -mt-10">
+          <p className="mb-10 max-w-2xl font-Ovo -mt-40 md:-mt-10">
             Software Engineer with a Higher National Diploma and a Diploma in
             Software Engineering from NIBM. Currently enhancing my expertise
             through an internship at Innova Global Lanka, contributing to
