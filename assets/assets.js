@@ -11,10 +11,8 @@ import figma from './figma.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.png';
 import yasas_logo from './yasas_logo.png'
 import yasas_logo_dark from './yasas_logo_dark.png'
-import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
@@ -52,8 +50,6 @@ export const assets = {
     git,
     mongodb,
     right_arrow_white,
-    logo,
-    logo_dark,
     yasas_logo,
     yasas_logo_dark,
     mail_icon,
