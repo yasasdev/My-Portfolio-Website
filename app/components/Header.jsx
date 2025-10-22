@@ -26,7 +26,7 @@ const Header = () => {
       </h1>
 
       {/* Description */}
-      <p className="max-w-3xl mx-auto font-Ovo text-gray-700 leading-relaxed">
+      <p className="max-w-3xl mx-auto font-Ovo text-gray-600 dark:text-white leading-relaxed">
         | NIBM | Undergraduate | BSc (Hons) Software Engineering | Full-stack developer | <br />
         | Intern Software Engineer @ Innova Global Lanka | Volunteer | <br /> Fail • Learn • Repeat 💻
       </p>
@@ -35,7 +35,8 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
         <a
           href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 hover:bg-gray-800 transition"
+          className="px-10 py-3 border border-white rounded-full bg-black text-white 
+          flex items-center gap-2 hover:bg-gray-800 transition dark:bg-transparent"
         >
           Contact me
           <Image
@@ -48,7 +49,8 @@ const Header = () => {
         <a
           href="/sample-resume.pdf"
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 hover:bg-gray-100 transition"
+          className="px-10 py-3 border rounded-full border-gray-500 flex 
+          items-center gap-2 hover:bg-gray-100 transition bg-white dark:text-black"
         >
           My Resume
           <Image
