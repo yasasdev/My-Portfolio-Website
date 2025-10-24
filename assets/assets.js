@@ -34,6 +34,12 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import blockchain from './blockchain.jpeg';
+import blog from './blog.jpeg';
+import google from './google.jpeg';
+import api from './api.jpg';
+import lms from './lms.jpeg';
+import pos from './pos.jpeg';
 
 export const assets = {
     code_icon,
@@ -71,39 +77,45 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    blockchain,
+    blog,
+    google,
+    api,
+    lms,
+    pos
 };
 
 export const workData = [
     {
         title: 'Blockchain',
         description: 'Blockchain Notes Keeper Application',
-        bgImage: '/blockchain.jpeg',
+        bgImage: assets.blockchain,
     },
     {
         title: 'Web Application',
         description: 'Blog Web Application',
-        bgImage: '/blog.jpeg',
+        bgImage: assets.blog,
     },
     {
         title: 'Google OAuth',
         description: 'Notepad Application with Google OAuth',
-        bgImage: '/google.jpeg',
+        bgImage: assets.google,
     },
     {
         title: 'API Application',
         description: 'Global Holiday Seeker using API',
-        bgImage: '/api.jpg',
+        bgImage: assets.api,
     },
     {
         title: 'LMS',
         description: 'Learning Management System Application',
-        bgImage: '/lms.jpeg',
+        bgImage: assets.lms,
     },
     {
         title: 'POS System',
         description: 'POS System for a Phone shop',
-        bgImage: '/pos.jpeg',
+        bgImage: assets.pos,
     },
 ]
 

@@ -34,7 +34,7 @@ const Work = () => {
           <div
             key={index}
             className="aspect-square bg-no-repeat bg-contain bg-center rounded-lg relative cursor-pointer group"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
+            style={{ backgroundImage: `url(${project.bgImage.src})` }}
           >
             <div
               className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2
