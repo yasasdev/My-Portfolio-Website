@@ -93,7 +93,7 @@ export const workData = [
     {
         title: 'API Application',
         description: 'Global Holiday Seeker using API',
-        bgImage: '/api.jpeg',
+        bgImage: '/api.jpg',
     },
     {
         title: 'LMS',
