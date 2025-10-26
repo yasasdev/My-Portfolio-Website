@@ -4,44 +4,26 @@ import React from "react";
 
 const About = ({ isDarkMode }) => {
   return (
-    <div
-      id="about"
-      className="w-full px-[12%] py-20 scroll-mt-20"
-    >
-      <h4
-        className="text-center mb-2 text-lg font-Ovo mt-10"
-      >
-        Introduction
-      </h4>
-      <h2
-        className="text-center text-4xl font-Ovo"
-      >
-        About Me
-      </h2>
-      <div
-        className="flex w-full flex-col lg:flex-row items-center gap-20 my-10"
-      >
-        <div
-          className="w-64 sm:w-80 rounded-3xl max-w-none"
-        >
+    <div id="about" className="w-full px-[12%] py-20 scroll-mt-20">
+      <h4 className="text-center mb-2 text-lg font-Ovo mt-10">Introduction</h4>
+      <h2 className="text-center text-4xl font-Ovo">About Me</h2>
+      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-10">
+        <div className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
             src={assets.yasas_user_profile_img}
             alt="User Image"
             className="w-full rounded-3xl mb-20"
           />
         </div>
-        <div
-          className="flex-1"
-        >
+        <div className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo -mt-40 md:-mt-10">
-            Software Engineer with a Higher National Diploma and a Diploma in
-            Software Engineering from NIBM. Currently enhancing my expertise
-            through an internship at Innova Global Lanka, contributing to
-            real-world software development projects.
+            I am an undergraduate software engineer. currently interning at
+            Innova Global Lanka. I have experience in developing POS systems,
+            web, and mobile applications, with a strong focus on detail and
+            functionality. I'm eager to apply my skills and contribute to
+            innovative tech projects.
           </p>
-          <ul
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
-          >
+          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 key={index}
@@ -66,9 +48,7 @@ const About = ({ isDarkMode }) => {
           <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
             Tools I use
           </h4>
-          <ul
-            className="flex items-center gap-3 sm:gap-5"
-          >
+          <ul className="flex items-center gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
               <li
                 key={index}

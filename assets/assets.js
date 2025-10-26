@@ -89,32 +89,32 @@ export const assets = {
 export const workData = [
     {
         title: 'Blockchain',
-        description: 'Blockchain Notes Keeper Application',
+        description: 'Notes keeper application built on blockchain for secure, immutable note storage.',
         bgImage: assets.blockchain,
     },
     {
         title: 'Web Application',
-        description: 'Blog Web Application',
+        description: 'Full-featured blog platform with responsive design, content management, and SEO-friendly routing.',
         bgImage: assets.blog,
     },
     {
         title: 'Google OAuth',
-        description: 'Notepad Application with Google OAuth',
+        description: 'Notepad application with Google OAuth authentication and cloud sync for user notes.',
         bgImage: assets.google,
     },
     {
         title: 'API Application',
-        description: 'Global Holiday Seeker using API',
+        description: 'Global holiday lookup app that queries public APIs to fetch holidays by country and year.',
         bgImage: assets.api,
     },
     {
         title: 'LMS',
-        description: 'Learning Management System Application',
+        description: 'Learning Management System with course management, user roles, and progress tracking.',
         bgImage: assets.lms,
     },
     {
         title: 'POS System',
-        description: 'POS System for a Phone shop',
+        description: 'Point-of-sale system for a phone shop, including inventory management and sales reporting.',
         bgImage: assets.pos,
     },
 ]
