@@ -90,42 +90,42 @@ export const workData = [
   {
     title: "Blockchain",
     description:
-      "Notes keeper application built on blockchain for secure, immutable note storage.",
+      "Built a decentralized notes-storing web app using blockchain for secure and immutable data storage with a React-based frontend.",
     bgImage: assets.blockchain,
     link: "https://github.com/yasasdev/Decentralized-Notes-Keeper-application-with-React-Frontend",
   },
   {
     title: "Blog Web Application",
     description:
-      "Full-featured blog platform with responsive design, content management, and SEO-friendly routing.",
+      "Developed a blog platform for users to explore posts and for admins to manage content via CRUD operations.",
     bgImage: assets.blog,
     link: "https://github.com/yasasdev/Blog-Web-Application",
   },
   {
     title: "Google OAuth",
     description:
-      "Notepad application with Google OAuth authentication and cloud sync for user notes.",
+      "Built a secure notepad app with Google OAuth and local registration using hashed passwords for user authentication.",
     bgImage: assets.google,
     link: "https://github.com/yasasdev/Notepad-OAuth-Application",
   },
   {
     title: "API Application",
     description:
-      "Global holiday lookup app that queries public APIs to fetch holidays by country and year.",
+      "Created a web app to explore public holidays worldwide using the Calendarific API for country- and year-specific data.",
     bgImage: assets.api,
     link: "https://github.com/yasasdev/Global-Holidays-using-API",
   },
   {
     title: "Learning Management System",
     description:
-      "Learning Management System with course management, user roles, and progress tracking.",
+      "Built a system for managing learning materials with PDF upload, edit, and delete features using PHP and array data structures.",
     bgImage: assets.lms,
     link: "https://github.com/yasasdev/Learning-Management-System",
   },
   {
     title: "Web Based POS System",
     description:
-      "Point-of-sale system for a phone shop, including inventory management and sales reporting.",
+      "Developed a custom POS system for inventory, transactions, and customer management for a phone shop.",
     bgImage: assets.pos,
     link: "https://github.com/yasasdev/Web-based-POS-System",
   },
