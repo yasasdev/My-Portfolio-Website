@@ -1,145 +1,158 @@
-import { assets } from "@/assets/assets";
+"use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { assets } from "@/assets/assets";
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
-  const sideMenu = useRef();
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { name: "Home", href: "#top" },
+    { name: "About Me", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "My Work", href: "#work" },
+    { name: "Contact Me", href: "#contact" },
+  ];
+
+  // ✅ Prevent body scroll when mobile menu is open
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const openMenu = () => {
-    sideMenu.current.style.transform = "translateX(-16rem)";
-  };
-
-  const closeMenu = () => {
-    sideMenu.current.style.transform = "translateX(16rem)";
-  };
+  }, [isOpen]);
 
   return (
-    <div id="top">
-      <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
-          transition-all duration-300 dark:bg-darkTheme dark:shadow-white/20 ${
-            scrolled
-              ? "bg-gray-100/80 backdrop-blur-lg"
-              : "bg-gray-100/60 backdrop-blur-md"
-          }`}
-      >
-        <a href="#top">
+    <nav
+      className={`w-full sticky top-0 left-0 z-50 shadow-md transition-all duration-300 
+        ${isDarkMode ? "bg-darkTheme text-white" : "bg-white text-gray-800"}`}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Left - Logo */}
+        <div className="flex items-center space-x-3 ml-10">
           <Image
             src={isDarkMode ? assets.yasas_logo_dark : assets.yasas_logo}
             alt="Logo"
-            className="w-28 cursor-pointer mr-14"
+            width={100}
+            height={100}
+            className="rounded-full cursor-pointer"
           />
-        </a>
+        </div>
+
+        {/* Center - Nav Links (Desktop) */}
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
-          ${
-            scrolled
-              ? ""
-              : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
-          } `}
+          className={`hidden md:flex items-center space-x-8 font-medium transition-all duration-300 ${
+            isDarkMode ? "text-white" : "text-gray-700"
+          }`}
         >
-          <li>
-            <a className="font-Ovo" href="#top">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#about">
-              About me
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#services">
-              Services
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#work">
-              My Work
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" href="#contact">
-              Contact me
-            </a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className={`relative group text-base transition duration-300 cursor-pointer ${
+                  isDarkMode ? "hover:text-gray-300" : "hover:text-black"
+                }`}
+              >
+                {link.name}
+                <span
+                  className={`absolute left-0 bottom-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full ${
+                    isDarkMode ? "bg-white" : "bg-black"
+                  }`}
+                ></span>
+              </a>
+            </li>
+          ))}
         </ul>
-        <div className="flex items-center gap-4">
+
+        {/* Right - Contact Button + Dark Mode Toggle */}
+        <div className="hidden md:flex items-center gap-4">
           <button onClick={() => setIsDarkMode((prev) => !prev)}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               alt="theme toggle"
-              className="w-6"
+              width={24}
+              height={24}
+              className="cursor-pointer mr-3"
             />
           </button>
           <a
-            href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border 
-            border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50"
+            href="#contactme"
+            className={`px-5 py-2 rounded-full transition duration-300 border ${
+              isDarkMode
+                ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
+                : "bg-black text-white border-black hover:bg-gray-800"
+            }`}
           >
-            Let's talk
-            <Image
-              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
-              alt="Contact Button"
-              className="w-3"
-            />
+            Contact Me
           </a>
-          <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={isDarkMode ? assets.menu_white : assets.menu_black } alt="menu icon" className="w-6" />
-          </button>
         </div>
 
-        {/* Mobile Menu */}
-        <ul
-          ref={sideMenu}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 
-          w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white"
+        {/* Mobile Menu Button */}
+        <button
+          className={`md:hidden transition duration-300 ${
+            isDarkMode ? "text-white" : "text-gray-800"
+          }`}
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <Image
-              src={isDarkMode ? assets.close_white : assets.close_black}
-              alt="menu close icon"
-              className="w-5 cursor-pointer"
-            />
-          </div>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
 
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#top">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#about">
-              About me
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#services">
-              Services
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#work">
-              My Work
-            </a>
-          </li>
-          <li>
-            <a className="font-Ovo" onClick={closeMenu} href="#contact">
-              Contact me
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div
+          className={`md:hidden shadow-lg border-t transition-all duration-300 fixed inset-0 z-40 overflow-y-auto ${
+            isDarkMode
+              ? "bg-darkTheme text-white border-white/20"
+              : "bg-white text-gray-800 border-gray-200"
+          }`}
+        >
+          <ul className="flex flex-col items-center py-4 space-y-4 mt-10">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className={`text-lg transition duration-300 ${
+                    isDarkMode ? "hover:text-gray-300" : "hover:text-black"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+            <li className="flex flex-col items-center gap-4 mt-4">
+              <button onClick={() => setIsDarkMode((prev) => !prev)}>
+                <Image
+                  src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+                  alt="theme toggle"
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </button>
+              <a
+                href="#contactme"
+                className={`px-5 py-2 rounded-full transition duration-300 border ${
+                  isDarkMode
+                    ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
+                    : "bg-black text-white border-black hover:bg-gray-800"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Contact Me
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 };
 
