@@ -15,7 +15,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     { name: "Contact Me", href: "#contact" },
   ];
 
-  // ✅ Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -157,14 +156,22 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               </button>
               <a
                 href="#contact"
-                className={`px-5 py-2 rounded-full transition duration-300 border ${
+                onClick={() => setIsOpen(false)}
+                className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3
+                ${
                   isDarkMode
                     ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
                     : "bg-black text-white border-black hover:bg-gray-800"
                 }`}
-                onClick={() => setIsOpen(false)}
               >
-                Contact Me
+                Let's Talk
+                <Image
+                  src={assets.arrow_icon_dark}
+                  alt="arrow icon"
+                  width={12}
+                  height={12}
+                  className="inline-block"
+                />
               </a>
             </li>
           </ul>
