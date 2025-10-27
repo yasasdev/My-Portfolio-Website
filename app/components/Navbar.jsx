@@ -16,12 +16,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   ];
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -29,8 +24,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <nav
-      className={`w-full sticky top-0 left-0 z-50 shadow-md transition-all duration-300 
-        ${isDarkMode ? "bg-darkTheme text-white" : "bg-white text-gray-800"}`}
+      className={`w-full sticky top-0 left-0 z-50 shadow-md transition-all duration-300 ${
+        isDarkMode ? "bg-darkTheme text-white" : "bg-white text-gray-800"
+      }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Left - Logo */}
@@ -71,7 +67,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           ))}
         </ul>
 
-        {/* Right - Contact Button + Dark Mode Toggle */}
+        {/* Right - Desktop Contact Button */}
         <div className="hidden md:flex items-center gap-4">
           <button onClick={() => setIsDarkMode((prev) => !prev)}>
             <Image
@@ -84,8 +80,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </button>
           <a
             href="#contact"
-            className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3
-            ${
+            className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3 ${
               isDarkMode
                 ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
                 : "bg-black text-white border-black hover:bg-gray-800"
@@ -102,15 +97,26 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className={`md:hidden transition duration-300 ${
-            isDarkMode ? "text-white" : "text-gray-800"
-          }`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={30} /> : <Menu size={30} />}
-        </button>
+        {/* Mobile Right Section - Theme Toggle + Menu Button */}
+        <div className="flex md:hidden items-center gap-4">
+          <button onClick={() => setIsDarkMode((prev) => !prev)}>
+            <Image
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+              alt="theme toggle"
+              width={24}
+              height={24}
+              className="cursor-pointer"
+            />
+          </button>
+          <button
+            className={`transition duration-300 ${
+              isDarkMode ? "text-white" : "text-gray-800"
+            }`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={30} /> : <Menu size={30} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -145,20 +151,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               </li>
             ))}
             <li className="flex flex-col items-center gap-4 mt-4">
-              <button onClick={() => setIsDarkMode((prev) => !prev)}>
-                <Image
-                  src={isDarkMode ? assets.sun_icon : assets.moon_icon}
-                  alt="theme toggle"
-                  width={24}
-                  height={24}
-                  className="cursor-pointer"
-                />
-              </button>
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3
-                ${
+                className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3 ${
                   isDarkMode
                     ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
                     : "bg-black text-white border-black hover:bg-gray-800"
