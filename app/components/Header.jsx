@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Header = () => {
   return (
-    <div className="mt-36 w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col justify-center items-center gap-4">
+    <div className="mt-20 w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col justify-center items-center gap-4">
       {/* Profile Image */}
       <motion.div
         initial={{ scale: 0 }}
