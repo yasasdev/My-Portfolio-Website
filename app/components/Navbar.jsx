@@ -36,13 +36,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Left - Logo */}
         <div className="flex items-center space-x-3 ml-10">
-          <Image
-            src={isDarkMode ? assets.yasas_logo_dark : assets.yasas_logo}
-            alt="Logo"
-            width={100}
-            height={100}
-            className="rounded-full cursor-pointer"
-          />
+          <a href="#top">
+            <Image
+              src={isDarkMode ? assets.yasas_logo_dark : assets.yasas_logo}
+              alt="Logo"
+              width={100}
+              height={100}
+              className="rounded-full cursor-pointer"
+            />
+          </a>
         </div>
 
         {/* Center - Nav Links (Desktop) */}
@@ -82,14 +84,22 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             />
           </button>
           <a
-            href="#contactme"
-            className={`px-5 py-2 rounded-full transition duration-300 border ${
+            href="#contact"
+            className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3
+            ${
               isDarkMode
                 ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
                 : "bg-black text-white border-black hover:bg-gray-800"
             }`}
           >
-            Contact Me
+            Let's Talk
+            <Image
+              src={assets.arrow_icon_dark}
+              alt="arrow icon"
+              width={12}
+              height={12}
+              className="inline-block"
+            />
           </a>
         </div>
 
@@ -100,19 +110,27 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className={`md:hidden shadow-lg border-t transition-all duration-300 fixed inset-0 z-40 overflow-y-auto ${
+          className={`md:hidden shadow-lg border-t transition-all duration-300 fixed inset-0 z-50 overflow-y-auto ${
             isDarkMode
               ? "bg-darkTheme text-white border-white/20"
               : "bg-white text-gray-800 border-gray-200"
           }`}
         >
+          {/* Close button */}
+          <button
+            className="absolute top-5 right-5"
+            onClick={() => setIsOpen(false)}
+          >
+            <X size={30} />
+          </button>
+
           <ul className="flex flex-col items-center py-4 space-y-4 mt-10">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -138,7 +156,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                 />
               </button>
               <a
-                href="#contactme"
+                href="#contact"
                 className={`px-5 py-2 rounded-full transition duration-300 border ${
                   isDarkMode
                     ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
