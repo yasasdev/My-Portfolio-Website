@@ -49,7 +49,7 @@ const Header = () => {
       >
         | NIBM | Undergraduate | BSc (Hons) Software Engineering | Full-stack
         developer | <br />
-        | Intern Software Engineer @ Innova Global Lanka | Volunteer | <br />{" "}
+        | Associate Software Engineer @ X4 DigitalLabs | Volunteer | <br />
         Fail • Learn • Repeat 💻
       </motion.p>
 
