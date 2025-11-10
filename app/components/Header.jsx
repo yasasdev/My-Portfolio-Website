@@ -75,7 +75,7 @@ const Header = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href="/Yasas-Lekamge-CV-v4.1.pdf"
+          href="/Yasas-Lekamge-CV-v4.2.pdf"
           download
           className="px-10 py-3 mt-1 sm:-mt-8 border rounded-full border-gray-500 flex 
              items-center gap-2 hover:bg-gray-100 transition bg-white dark:text-black"
