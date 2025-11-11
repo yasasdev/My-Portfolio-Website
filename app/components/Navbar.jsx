@@ -80,6 +80,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </button>
           <a
             href="#contact"
+            // href="https://wa.me/94742353017"
+            // target="_blank"
+            // rel="noopener noreferrer"
             className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3 ${
               isDarkMode
                 ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
