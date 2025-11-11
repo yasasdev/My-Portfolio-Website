@@ -83,15 +83,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             // href="https://wa.me/94742353017"
             // target="_blank"
             // rel="noopener noreferrer"
-            className={`px-10 py-2 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3 ${
+            className={`px-5 py-1 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3 ${
               isDarkMode
                 ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
-                : "bg-black text-white border-black hover:bg-gray-800"
+                : "text-black border-black hover:bg-gray-100"
             }`}
           >
             Let's Talk
             <Image
-              src={assets.arrow_icon_dark}
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
               alt="arrow icon"
               width={12}
               height={12}
