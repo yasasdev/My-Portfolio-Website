@@ -35,9 +35,9 @@ const Header = () => {
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-3xl sm:text-6xl lg:text-[40px] font-Ovo mb-6"
+        className="text-3xl sm:text-6xl lg:text-[35px] font-Ovo mb-6"
       >
-        Full Stack Developer based in Sri Lanka
+        Passionate about creating impactful software
       </motion.h1>
 
       {/* Description */}
