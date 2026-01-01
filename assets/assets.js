@@ -40,6 +40,8 @@ import google from "./google.jpeg";
 import api from "./api.jpg";
 import lms from "./lms.jpeg";
 import pos from "./pos.jpeg";
+import postgreSQL from "./postgreSQL.png";
+import docker from "./docker.png";
 
 export const assets = {
   code_icon,
@@ -76,6 +78,8 @@ export const assets = {
   graphics_icon,
   right_arrow,
   send_icon,
+  postgreSQL,
+  docker,
   right_arrow_bold,
   right_arrow_bold_dark,
   blockchain,
@@ -179,6 +183,8 @@ export const infoList = [
 export const toolsData = [
   assets.vscode,
   assets.mongodb,
+  assets.postgreSQL,
   assets.git,
   assets.github,
+  assets.docker,
 ];

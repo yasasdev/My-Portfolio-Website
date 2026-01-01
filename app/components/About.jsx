@@ -15,13 +15,12 @@ const About = ({ isDarkMode }) => {
             className="w-full rounded-3xl mb-20"
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 mt-5">
           <p className="mb-10 max-w-2xl font-Ovo -mt-40 md:-mt-10">
-            I am an undergraduate software engineer. currently interning at
-            Innova Global Lanka. I have experience in developing POS systems,
-            web, and mobile applications, with a strong focus on detail and
-            functionality. I'm eager to apply my skills and contribute to
-            innovative tech projects.
+            I am an undergraduate software engineer currently working at X4 DigitalLabs as an Associate Software Engineer. 
+            I have experience in developing web-based management systems <br /> and public-facing websites, as well as mobile applications, 
+            with a strong focus on functionality, performance, and attention to detail. I am eager to apply my technical skills 
+            and contribute to innovative and impactful technology projects.
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
