@@ -5,7 +5,7 @@ import React from "react";
 const About = ({ isDarkMode }) => {
   return (
     <div id="about" className="w-full px-[12%] py-20 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Ovo mt-10">Introduction</h4>
+      <h4 className="text-center mb-2 text-lg font-Ovo mt-8">Introduction</h4>
       <h2 className="text-center text-4xl font-Ovo">About Me</h2>
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-10">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
