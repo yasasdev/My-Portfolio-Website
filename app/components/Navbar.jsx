@@ -6,6 +6,7 @@ import { assets } from "@/assets/assets";
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "#top" },
@@ -22,10 +23,29 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
-      className={`w-full sticky top-0 left-0 z-50 shadow-md transition-all duration-300 ${
-        isDarkMode ? "bg-darkTheme text-white" : "bg-white text-gray-800"
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? isDarkMode
+            ? "bg-darkTheme/80 backdrop-blur-sm text-white"
+            : "bg-white/80 backdrop-blur-sm text-gray-800"
+          : isDarkMode
+          ? "bg-darkTheme text-white"
+          : "bg-white text-gray-800"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -80,9 +100,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </button>
           <a
             href="#contact"
-            // href="https://wa.me/94742353017"
-            // target="_blank"
-            // rel="noopener noreferrer"
             className={`px-5 py-1 w-full font-Ovo rounded-full transition duration-300 border flex items-center justify-center gap-3 ${
               isDarkMode
                 ? "bg-transparent border-white text-white hover:bg-white hover:text-black"
