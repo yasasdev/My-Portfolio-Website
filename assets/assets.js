@@ -42,6 +42,8 @@ import lms from "./lms.jpeg";
 import pos from "./pos.jpeg";
 import postgreSQL from "./postgreSQL.png";
 import docker from "./docker.png";
+import school_image_1 from "./school_image_1.jpg";
+import school_image_2 from "./school_image_2.jpg";
 
 export const assets = {
   code_icon,
@@ -80,6 +82,8 @@ export const assets = {
   send_icon,
   postgreSQL,
   docker,
+  school_image_1,
+  school_image_2,
   right_arrow_bold,
   right_arrow_bold_dark,
   blockchain,
