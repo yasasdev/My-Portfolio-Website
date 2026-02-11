@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 export default function sitemap() {
   const baseUrl = 'https://my-portfolio-website-two-wine.vercel.app';
 
