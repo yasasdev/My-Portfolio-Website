@@ -14,7 +14,7 @@ import yasas_logo_dark from "./yasas_logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
 import yasas_profile_img from "./yasas-profile-image.png";
-import yasas_user_profile_img from "./yasas-user-img.png";
+import yasas_user_profile_img from "./yasas-user-img1.jpeg";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
