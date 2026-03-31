@@ -88,6 +88,24 @@ const Header = () => {
           />
         </motion.a>
       </div>
+
+      {/* Stats */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.4 }}
+        className="flex items-center gap-8 mt-6"
+      >
+        <div className="text-center">
+          <p className="text-2xl font-semibold font-Ovo dark:text-white">2+</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 font-Ovo">Current Clients</p>
+        </div>
+        <div className="w-px h-10 bg-gray-300 dark:bg-gray-600" />
+        <div className="text-center">
+          <p className="text-2xl font-semibold font-Ovo dark:text-white">20+</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 font-Ovo">Projects Completed</p>
+        </div>
+      </motion.div>
     </div>
   );
 };
