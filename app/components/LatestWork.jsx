@@ -57,12 +57,12 @@ const LatestWork = () => {
       </div>
 
       {/* Two School Photos - Side by Side */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12 justify-items-center">
         <div className="relative group overflow-hidden rounded-xl shadow-lg">
           <Image
             src={assets.school_image_1}
             alt="Vertex International School"
-            className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            className="w-96 object-contain transition-transform duration-500 group-hover:scale-105"
             width={600}
             height={400}
             priority
@@ -73,7 +73,7 @@ const LatestWork = () => {
           <Image
             src={assets.school_image_2}
             alt="Vertex International School Campus"
-            className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            className="w-96 object-contain transition-transform duration-500 group-hover:scale-105"
             width={600}
             height={400}
             priority
@@ -92,7 +92,7 @@ const LatestWork = () => {
         {/* Card Header */}
         <div className="px-6 md:px-10 pt-8 pb-4 border-b border-gray-100 dark:border-gray-800">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-Ovo text-base md:text-lg">
-            I am proud to announce the successful completion and delivery of a
+            I'm proud to announce the successful completion and delivery of a
             comprehensive School Management System for{" "}
             <span className="font-semibold text-black dark:text-white">
               Vertex International School

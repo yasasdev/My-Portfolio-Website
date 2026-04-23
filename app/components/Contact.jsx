@@ -65,6 +65,49 @@ const Contact = () => {
         hear from you!
       </motion.p>
 
+      {/* WhatsApp Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.9, duration: 0.5 }}
+        className="max-w-2xl mx-auto mb-12 p-6 bg-gradient-to-r from-green-50 to-emerald-50 
+        dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg border border-green-200 
+        dark:border-green-800/50 text-center"
+      >
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <svg
+            className="w-6 h-6 text-green-600 dark:text-green-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.01 1.01 4.33L2 22l6.34-1.67C10.26 21.48 11.1 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-.85 0-1.65-.2-2.37-.54l-.17-.09-1.76.46.47-1.71-.1-.18C4.5 15.6 4 13.86 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.64-12.55c-.24-.12-1.43-.71-1.65-.79-.22-.09-.38-.13-.54.13-.16.26-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.37.08-.15.04-.28-.02-.39-.06-.11-.54-1.3-.74-1.78-.19-.47-.39-.41-.54-.41-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2.01 0 1.19.86 2.33 1 2.49.14.16 1.99 3.05 4.82 4.28.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.68-.69 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.23-.19-.47-.31z" />
+          </svg>
+          <h3 className="text-lg font-semibold text-green-700 dark:text-green-300 font-Ovo">
+            Need a quick reply?
+          </h3>
+        </div>
+        <p className="text-gray-700 dark:text-gray-300 mb-4 font-Ovo">
+          Chat with me on WhatsApp for a faster response!
+        </p>
+        <a
+          href="https://wa.me/+94701941387?text=Hi%2C%20I%E2%80%99d%20like%20to%20connect%20and%20discuss%20how%20I%20can%20assist%20you.%20Please%20let%20me%20know%20if%20you%E2%80%99re%20available."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 
+          text-white rounded-full transition-all duration-300 font-medium font-Ovo
+          dark:bg-green-500 dark:hover:bg-green-600"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.01 1.01 4.33L2 22l6.34-1.67C10.26 21.48 11.1 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-.85 0-1.65-.2-2.37-.54l-.17-.09-1.76.46.47-1.71-.1-.18C4.5 15.6 4 13.86 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.64-12.55c-.24-.12-1.43-.71-1.65-.79-.22-.09-.38-.13-.54.13-.16.26-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.1-.1.24-.26.36-.39.12-.13.16-.22.24-.37.08-.15.04-.28-.02-.39-.06-.11-.54-1.3-.74-1.78-.19-.47-.39-.41-.54-.41-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2.01 0 1.19.86 2.33 1 2.49.14.16 1.99 3.05 4.82 4.28.68.29 1.2.46 1.61.59.68.22 1.3.19 1.79.11.55-.08 1.68-.69 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.23-.19-.47-.31z" />
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </motion.div>
+
       <form
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto"
