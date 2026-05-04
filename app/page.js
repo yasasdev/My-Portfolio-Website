@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import LatestWork from "./components/LatestWork";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 
@@ -45,6 +46,7 @@ export default function Home() {
       <LatestWork />
       <Work isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
+      <Reviews isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </>
   );

@@ -186,3 +186,12 @@ export const toolsData = [
   assets.github,
   assets.docker,
 ];
+
+export const reviewsData = [
+  {
+    name: "Madara Priyadharshani - Director",
+    project: "School Management System",
+    review: "Delivered a clean, fast, and fully responsive system. Communication was excellent throughout.",
+    rating: 5,
+  },
+];
