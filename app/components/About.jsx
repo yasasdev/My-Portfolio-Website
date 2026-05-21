@@ -22,7 +22,7 @@ const About = ({ isDarkMode }) => {
             with a strong focus on functionality, performance, and attention to detail. I am eager to apply my technical skills 
             and contribute to innovative and impactful technology projects.
           </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 key={index}

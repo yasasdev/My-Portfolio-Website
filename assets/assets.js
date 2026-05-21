@@ -44,6 +44,10 @@ import postgreSQL from "./postgreSQL.png";
 import docker from "./docker.png";
 import school_image_1 from "./school_image_1.jpg";
 import school_image_2 from "./school_image_2.jpg";
+import aws from "./aws.svg";
+import azure from "./azure.svg";
+import devops_icon from "./devops_icon.svg";
+import devops_icon_dark from "./devops_icon_dark.svg";
 
 export const assets = {
   code_icon,
@@ -92,6 +96,10 @@ export const assets = {
   api,
   lms,
   pos,
+  aws,
+  azure,
+  devops_icon,
+  devops_icon_dark,
 };
 
 export const workData = [
@@ -176,6 +184,12 @@ export const infoList = [
     title: "Projects",
     description: "Built more than 20 projects",
   },
+  {
+    icon: assets.devops_icon,
+    iconDark: assets.devops_icon_dark,
+    title: "DevOps",
+    description: "AWS, Azure",
+  },
 ];
 
 export const toolsData = [
@@ -185,6 +199,8 @@ export const toolsData = [
   assets.git,
   assets.github,
   assets.docker,
+  assets.aws,
+  assets.azure,
 ];
 
 export const reviewsData = [

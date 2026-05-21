@@ -5,7 +5,8 @@
       "Bash(findstr:*)",
       "Bash(Get-ChildItem -Path \"d:\\\\My Documents\\\\my-projects\\\\my-portfolio-website\" -Force)",
       "Bash(Select-Object Name, Mode)",
-      "PowerShell(Get-ChildItem -Path \"d:\\\\My Documents\\\\my-projects\\\\my-portfolio-website\\\\app\" -Recurse | Where-Object { $_.PSIsContainer -eq $false } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"d:\\\\My Documents\\\\my-projects\\\\my-portfolio-website\\\\\", \"\"\\) })"
+      "PowerShell(Get-ChildItem -Path \"d:\\\\My Documents\\\\my-projects\\\\my-portfolio-website\\\\app\" -Recurse | Where-Object { $_.PSIsContainer -eq $false } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"d:\\\\My Documents\\\\my-projects\\\\my-portfolio-website\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem \"d:\\\\My Documents\\\\my-projects\\\\my-portfolio-website\\\\assets\" | Where-Object { $_.Name -match \"devops|aws|azure\" } | Select-Object Name, Length)"
     ]
   }
 }
