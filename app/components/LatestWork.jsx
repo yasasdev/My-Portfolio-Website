@@ -147,6 +147,58 @@ const LatestWork = () => {
         </div>
       </div>
 
+      {/* Website Section */}
+      <div className="mt-16 max-w-4xl mx-auto">
+        <h3 className="text-center text-2xl md:text-3xl font-Ovo font-semibold mb-2">
+          Official School Website
+        </h3>
+        <p className="text-center text-gray-500 dark:text-gray-400 font-Ovo mb-6">
+          Also built and launched the public-facing website for Vertex International School
+        </p>
+
+        <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-lg bg-white dark:bg-gray-900/60">
+          {/* Website Screenshot */}
+          <div className="relative group overflow-hidden">
+            <a href="https://vis.lk/" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/WebsiteImage/Website.png"
+                alt="Vertex International School Website - vis.lk"
+                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                width={1200}
+                height={700}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-black font-semibold px-5 py-2.5 rounded-full text-sm shadow-lg">
+                  Visit Website →
+                </span>
+              </div>
+            </a>
+          </div>
+
+          {/* Website info footer */}
+          <div className="px-6 md:px-10 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Designed &amp; developed a modern, responsive website for the school — now live and serving students, parents, and staff.
+              </p>
+            </div>
+            <a
+              href="https://vis.lk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold
+                bg-emerald-500 hover:bg-emerald-600 text-white transition-colors duration-200 shadow-md"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+              </span>
+              Live at vis.lk
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Divider */}
       <div className="mt-16 flex items-center gap-4">
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent" />

@@ -105,7 +105,7 @@ const Contact = () => {
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto"
       >
-        <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
           <input
             type="text"
             placeholder="Enter your name"
