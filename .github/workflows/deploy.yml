@@ -1,0 +1,63 @@
+name: Portfolio Production Deployment
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ 
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js application 
+        run: |
+          npm run build
+          # Archive the files for upload
+          tar -czf build.tar.gz .next public package.json package-lock.json node_modules ecosystem.config.cjs
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Upload build to server
+        run: |
+          scp build.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/yasas_porfolio
+
+      - name: Deploy on server
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+          cd /root/yasas_porfolio
+          
+          # Extract build
+          tar -xzf build.tar.gz
+          rm build.tar.gz
+          
+          # Restart PM2 instance for portfolio
+          npx pm2 reload ecosystem.config.cjs --env production || npx pm2 start ecosystem.config.cjs --env production
+          npx pm2 save
+          EOF
+
+      - name: Deployment notification
+        if: success()
+        run: echo "✅ Portfolio deployment successful!"
