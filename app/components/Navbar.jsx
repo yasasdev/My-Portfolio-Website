@@ -37,6 +37,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   }, []);
 
   return (
+    <>
     <nav
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
         isScrolled
@@ -139,13 +140,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+    </nav>
+
+      {/* Mobile Menu — rendered outside <nav> so backdrop-blur cannot trap the fixed overlay */}
       {isOpen && (
         <div
-          className={`md:hidden shadow-lg border-t transition-all duration-300 fixed inset-0 z-50 overflow-y-auto ${
+          className={`md:hidden fixed inset-0 z-[60] overflow-y-auto shadow-lg ${
             isDarkMode
-              ? "bg-darkTheme text-white border-white/20"
-              : "bg-white text-gray-800 border-gray-200"
+              ? "bg-darkTheme text-white"
+              : "bg-white text-gray-800"
           }`}
         >
           {/* Close button */}
@@ -193,7 +196,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </ul>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Header = () => {
   return (
-    <div className="mt-20 w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col justify-center items-center gap-4">
+    <div className="w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col justify-center items-center gap-4 pt-24 pb-10">
       {/* Profile Image */}
       <motion.div
         initial={{ scale: 0 }}
@@ -15,7 +15,7 @@ const Header = () => {
         <Image
           src={assets.yasas_profile_img}
           alt="Profile image"
-          className="rounded-full w-32 h-32 object-cover mt-9"
+          className="rounded-full w-32 h-32 object-cover"
         />
       </motion.div>
 
