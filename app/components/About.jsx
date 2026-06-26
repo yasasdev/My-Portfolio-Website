@@ -5,8 +5,8 @@ import React from "react";
 const About = ({ isDarkMode }) => {
   return (
     <div id="about" className="w-full px-[12%] py-20 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Ovo mt-8">Introduction</h4>
-      <h2 className="text-center text-4xl font-Ovo">About Me</h2>
+      <p className="text-center mb-3 text-xs uppercase tracking-[0.3em] text-accent mt-8">Introduction</p>
+      <h2 className="text-center text-4xl font-Ovo dark:text-white">About Me</h2>
       <div className="flex w-full flex-col xl:flex-row items-center xl:items-start gap-10 xl:gap-16 my-10">
 
         {/* Profile Image */}

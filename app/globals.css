@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: Outfit;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
 }
 
 html, body {

@@ -38,19 +38,19 @@ const Contact = () => {
       className="w-full px-[12%] py-10 scroll-mt-20 
     bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
     >
-      <motion.h4
+      <motion.p
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="text-center mb-2 text-lg font-Ovo"
+        className="text-center mb-3 text-xs uppercase tracking-[0.3em] text-accent"
       >
         Connect with me
-      </motion.h4>
+      </motion.p>
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="text-center text-4xl font-Ovo"
+        className="text-center text-4xl font-Ovo dark:text-white"
       >
         Get in touch
       </motion.h2>

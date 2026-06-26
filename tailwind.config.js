@@ -11,10 +11,11 @@ module.exports = {
         lightHover: '#fcf4ff',
         darkHover: '#2a004a',
         darkTheme: '#11001F',
+        accent: '#10B981',
       },
       fontFamily: {
-        Outfit: ["Outfit", "sans-serif"],
-        Ovo: ["Ovo", "serif"],
+        Outfit: ["'Liberation Mono'", "'Courier New'", "monospace"],
+        Ovo: ["'Liberation Mono'", "'Courier New'", "monospace"],
       },
       boxShadow: {
         'black': '4px 4px 0 #000',

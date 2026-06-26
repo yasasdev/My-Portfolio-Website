@@ -31,8 +31,8 @@ const Work = () => {
 
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Ovo">My Portfolio</h4>
-      <h2 className="text-center text-4xl font-Ovo">My Work</h2>
+      <p className="text-center mb-3 text-xs uppercase tracking-[0.3em] text-accent">My Portfolio</p>
+      <h2 className="text-center text-4xl font-Ovo dark:text-white">My Work</h2>
 
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
         Welcome to my portfolio! Explore my latest web development projects
@@ -77,7 +77,7 @@ const Work = () => {
                   >
                     <button
                       className="flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black
-                      px-6 py-3 rounded-full hover:bg-lime-300 hover:text-black transition-all duration-300
+                      px-6 py-3 rounded-full hover:bg-accent hover:text-white transition-all duration-300
                       shadow-md hover:shadow-lg"
                     >
                       View Project

@@ -145,10 +145,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       {/* Mobile Menu — rendered outside <nav> so backdrop-blur cannot trap the fixed overlay */}
       {isOpen && (
         <div
-          className={`md:hidden fixed inset-0 z-[60] overflow-y-auto shadow-lg ${
+          className={`md:hidden fixed inset-0 z-[60] overflow-y-auto backdrop-blur-xl ${
             isDarkMode
-              ? "bg-darkTheme text-white"
-              : "bg-white text-gray-800"
+              ? "bg-darkTheme/60 text-white"
+              : "bg-white/60 text-gray-800"
           }`}
         >
           {/* Close button */}

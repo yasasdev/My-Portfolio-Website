@@ -5,107 +5,93 @@ import { motion } from "motion/react";
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center mx-auto min-h-screen flex flex-col justify-center items-center gap-4 pt-24 pb-10">
-      {/* Profile Image */}
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-      >
-        <Image
-          src={assets.yasas_profile_img}
-          alt="Profile image"
-          className="rounded-full w-32 h-32 object-cover"
-        />
-      </motion.div>
+    <div className="w-full px-[12%] min-h-screen flex items-center pt-24 pb-16">
+      <div className="flex flex-col xl:flex-row items-center xl:items-center gap-12 xl:gap-20 w-full">
 
-      {/* Greeting */}
-      <motion.h3
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="flex justify-center items-center gap-2 text-xl md:text-2xl mb-3 font-Ovo"
-      >
-        Hi! I'm Yasas Lekamge{" "}
-        <Image src={assets.hand_icon} alt="Hand image" className="w-8 h-8" />
-      </motion.h3>
-
-      {/* Main Title */}
-      <motion.h1
-        initial={{ y: -30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-3xl sm:text-4xl lg:text-5xl font-Ovo mb-6"
-      >
-        Passionate about creating impactful software
-      </motion.h1>
-
-      {/* Description */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
-        className="max-w-3xl mx-auto font-Ovo text-gray-600 dark:text-white leading-relaxed"
-      >
-        | NIBM | Undergraduate | BSc (Hons) Software Engineering | Full-stack
-        developer | <br />
-        | Associate Software Engineer @ X4 DigitalLabs | Volunteer | <br />
-        Fail • Learn • Repeat 💻
-      </motion.p>
-
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-        <motion.a
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white
-          flex items-center gap-2 hover:bg-gray-800 transition dark:bg-transparent"
+        {/* Profile Image — first on mobile, right on xl */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="flex-shrink-0 xl:order-2"
         >
-          Contact me
           <Image
-            src={assets.right_arrow_white}
-            alt="Contact me arrow icon"
-            className="w-4"
+            src={assets.yasas_profile_img}
+            alt="Yasas Lekamge"
+            width={280}
+            height={280}
+            className="w-44 h-44 xl:w-72 xl:h-72 object-cover rounded-xl"
           />
-        </motion.a>
+        </motion.div>
 
-        <motion.a
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          href="/Yasas-Lekamge-CV.pdf"
-          download
-          className="px-10 py-3 border rounded-full border-gray-500 flex
-          items-center gap-2 hover:bg-gray-100 transition bg-white dark:text-black"
-        >
-          My Resume
-          <Image
-            src={assets.download_icon}
-            alt="Download icon"
-            className="w-4"
-          />
-        </motion.a>
+        {/* Text — below image on mobile, left on xl */}
+        <div className="flex-1 xl:order-1 flex flex-col items-center xl:items-start text-center xl:text-left">
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-xs font-bold tracking-[0.1em] uppercase text-accent mb-8"
+          >
+            Fail · Learn · Repeat
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-6xl sm:text-7xl lg:text-[5.5rem] uppercase font-bold leading-[1.05] dark:text-white"
+          >
+            Yasas<br />
+            Lekamge
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-xs uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mt-6"
+          >
+            Full-Stack Engineer · X4 DigitalLabs · NIBM
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="max-w-md text-gray-600 dark:text-white/70 leading-relaxed mt-6 mb-10"
+          >
+            I build web apps, management systems, and mobile products — from idea to
+            deployment. Studying Software Engineering while shipping real software at work.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-wrap gap-4 justify-center xl:justify-start"
+          >
+            <a
+              href="#contact"
+              className="px-8 py-3 bg-black text-white dark:bg-white dark:text-black text-sm
+              border border-black dark:border-white
+              hover:bg-accent hover:border-accent dark:hover:bg-accent dark:hover:text-black
+              transition-all duration-300"
+            >
+              Get in touch
+            </a>
+            <a
+              href="/Yasas-Lekamge-CV.pdf"
+              download
+              className="px-8 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-white text-sm
+              hover:border-accent hover:text-accent transition-all duration-300 flex items-center gap-2"
+            >
+              Resume
+              <Image src={assets.download_icon} alt="Download" className="w-3.5" />
+            </a>
+          </motion.div>
+        </div>
+
       </div>
-
-      {/* Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.4 }}
-        className="flex items-center gap-8 mt-6"
-      >
-        <div className="text-center">
-          <p className="text-2xl font-semibold font-Ovo dark:text-white">2+</p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 font-Ovo">Current Clients</p>
-        </div>
-        <div className="w-px h-10 bg-gray-300 dark:bg-gray-600" />
-        <div className="text-center">
-          <p className="text-2xl font-semibold font-Ovo dark:text-white">20+</p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 font-Ovo">Projects Completed</p>
-        </div>
-      </motion.div>
     </div>
   );
 };
