@@ -49,7 +49,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-xs uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mt-6"
+            className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400 dark:text-gray-500 mt-6"
           >
             Full-Stack Engineer · X4 DigitalLabs · NIBM
           </motion.p>
