@@ -42,7 +42,6 @@ import lms from "./lms.jpeg";
 import pos from "./pos.jpeg";
 import postgreSQL from "./postgreSQL.png";
 import docker from "./docker.png";
-import school_image_1 from "./school_image_1.jpg";
 import school_image_2 from "./school_image_2.jpg";
 import aws from "./aws.svg";
 import azure from "./azure.svg";
@@ -86,7 +85,6 @@ export const assets = {
   send_icon,
   postgreSQL,
   docker,
-  school_image_1,
   school_image_2,
   right_arrow_bold,
   right_arrow_bold_dark,
@@ -101,6 +99,27 @@ export const assets = {
   devops_icon,
   devops_icon_dark,
 };
+
+export const productionWorkData = [
+  {
+    title: "School Management System",
+    description:
+      "A comprehensive, production school management platform for Vertex International School covering admissions, academics, finance, HR, inventory, and multi-branch operations with role-based access control.",
+    bgImage: assets.school_image_2,
+    link: null,
+    status: "live",
+    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+  },
+  {
+    title: "Vertex International School — Website",
+    description:
+      "Designed and launched the public-facing marketing website for Vertex International School, now live and serving students, parents, and staff at vis.lk.",
+    bgImage: "/WebsiteImage/Website.png",
+    link: "https://vis.lk/",
+    status: "live",
+    techStack: ["Next.js", "Tailwind CSS"],
+  },
+];
 
 export const workData = [
   {

@@ -1,8 +1,8 @@
 "use client";
-import { assets, workData } from "@/assets/assets";
-import Image from "next/image";
+import { workData } from "@/assets/assets";
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProjectCard from "./ProjectCard";
 
 const Work = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -44,53 +44,7 @@ const Work = () => {
         {currentProjects.map((project, index) => {
           const actualIndex = indexOfFirstProject + index;
           return (
-            <div
-              key={actualIndex}
-              className={`flex flex-col md:flex-row gap-6 items-center ${
-                actualIndex % 2 === 1 ? "md:flex-row-reverse" : ""
-              }`}
-            >
-              {/* Project Image */}
-              <div className="w-full md:w-1/2 relative group cursor-pointer">
-                <div
-                  className="aspect-video bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden shadow-lg
-                  transform transition-transform"
-                  style={{ backgroundImage: `url(${project.bgImage.src})` }}
-                />
-              </div>
-
-              {/* Project Details */}
-              <div className="w-full md:w-1/2 space-y-4">
-                <h3 className="text-3xl font-semibold font-Ovo">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex gap-3 pt-2">
-                  {/* View Project Button */}
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button
-                      className="flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black
-                      px-6 py-3 rounded-full hover:bg-accent hover:text-white transition-all duration-300
-                      shadow-md hover:shadow-lg"
-                    >
-                      View Project
-                      <Image
-                        src={assets.send_icon}
-                        alt="Send Icon"
-                        className="w-4 invert dark:invert-0"
-                      />
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={actualIndex} project={project} index={actualIndex} />
           );
         })}
       </div>
